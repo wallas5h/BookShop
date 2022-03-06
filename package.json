@@ -1,0 +1,28 @@
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "books for everyone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wallas5h",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "express-handlebars": "^6.0.3",
+    "method-override": "^3.0.0",
+    "mongodb": "^4.4.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/method-override": "^0.0.32",
+    "@types/node": "^17.0.21",
+    "@types/uuid": "^8.3.4",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.2"
+  }
+}
