@@ -2,6 +2,8 @@ import * as express from "express";
 import "express-async-errors";
 import { engine } from "express-handlebars";
 import * as methodOverride from "method-override";
+import { homeRouter } from "./routers/home";
+import { newsletterRouter } from "./routers/newsletter";
 import './utils/db';
 
 
@@ -23,9 +25,8 @@ app.engine('.hbs', engine({
 }));
 app.set('view engine', '.hbs');
 
-app.get('/', (req: express.Request, res: express.Response) => {
-  res.render('index')
-})
+app.use('/', homeRouter);
+app.use('/newsletter', newsletterRouter)
 
 
 app.listen(3000, '127.0.0.1', () => {

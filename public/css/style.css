@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;300;400;500;600&display=swap");
-.header .header-1, .login-form-container, .login-form-container form .checkbox, .home .row, .icons-container .icons, .footer .share, .footer .share a, .loader-container.active {
+.header .header-1, .login-form-container, .login-form-container form .checkbox, .home .row, .icons-container .icons, .footer .share, .footer .share a, .loader-container.active, .newsletter-added-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -893,5 +893,38 @@ body {
 
 .loader-container img {
   height: 10rem;
+}
+
+.newsletter-added-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+}
+
+.newsletter-added-container h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #444;
+  text-align: center;
+}
+
+.newsletter-added-container span {
+  display: block;
+  text-align: center;
+  text-transform: none;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.newsletter-added-container span strong {
+  text-transform: lowercase;
 }
 /*# sourceMappingURL=style.css.map */

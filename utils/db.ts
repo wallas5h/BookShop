@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 
 const pass = '3f4zNGDblnXXrZMh'
 
@@ -9,7 +9,8 @@ const options = {
   useUnifiedTopology: true,
 };
 
-const client = new MongoClient(uri, options);
+export const client = new MongoClient(uri);
+export const newsletterMailList = client.db('Newsletter').collection('list')
 
 try {
   client.connect();
@@ -18,9 +19,6 @@ try {
   console.log(error)
 }
 
-module.exports = {
-  client
-}
 
 
 // const quotesCol = client.db("Quotes").collection("quotes");
