@@ -3,6 +3,7 @@ import "express-async-errors";
 import { engine } from "express-handlebars";
 import * as methodOverride from "method-override";
 import { homeRouter } from "./routers/home";
+import { loginRouter } from "./routers/login";
 import { newsletterRouter } from "./routers/newsletter";
 import './utils/db';
 
@@ -12,6 +13,7 @@ import './utils/db';
 
 const app = express();
 
+// app.use(bodyParser.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
 app.use(express.json());
 app.use(express.static('public'));
@@ -26,7 +28,8 @@ app.engine('.hbs', engine({
 app.set('view engine', '.hbs');
 
 app.use('/', homeRouter);
-app.use('/newsletter', newsletterRouter)
+app.use('/newsletter', newsletterRouter);
+app.use('/login', loginRouter);
 
 
 app.listen(3000, '127.0.0.1', () => {

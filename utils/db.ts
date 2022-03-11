@@ -10,7 +10,8 @@ const options = {
 };
 
 export const client = new MongoClient(uri);
-export const newsletterMailList = client.db('Newsletter').collection('list')
+export const newsletterMailList = client.db('Newsletter').collection('list');
+export const usersRegistered = client.db('Users').collection('registered');
 
 try {
   client.connect();

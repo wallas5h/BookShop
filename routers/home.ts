@@ -5,5 +5,10 @@ export const homeRouter = Router();
 
 homeRouter
   .get('/', (req, res) => {
-    res.render('index')
+
+
+
+    res.render('index', {
+
+    })
   })

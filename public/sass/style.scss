@@ -51,6 +51,20 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
   background-color:$black ;
 }
+.loader-container{
+  position: fixed;
+  top: 0;left: 0; right: 0; bottom: 0;
+  z-index: 1000;
+  background: #f7f7f7;
+  display: none;
+  &.active{
+    @extend %flex-center;
+  }
+  img{
+    height: 10rem;
+  }
+}
+
 
 .btn{
   margin-top: 1rem;
@@ -708,21 +722,7 @@ body{
   }
 }
 
-.loader-container{
-  position: fixed;
-  top: 0;left: 0; right: 0; bottom: 0;
-  z-index: 1000;
-  background: #f7f7f7;
-  display: none;
-  &.active{
-    @extend %flex-center;
-  }
-  img{
-    height: 10rem;
-  }
-}
-
-.newsletter-added-container{
+.info-added-container{
   @extend %flex-center;
   flex-direction: column;
   background-color:rgba(255,255,255,.9);

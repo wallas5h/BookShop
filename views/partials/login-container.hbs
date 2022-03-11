@@ -2,18 +2,18 @@
 
   <div id="close-login-btn" class="fas fa-times"></div>
 
-  <form action="">
+  <form action="/login" method="post">
     <h3>sign in</h3>
     <span>username</span>
-    <input type="email" name="" class="box" placeholder="enter your email" id="">
+    <input type="email" name="mail" class="box" placeholder="enter your email" id="" required>
     <span>password</span>
-    <input type="password" name="" class="box" placeholder="enter your password" id="">
+    <input type="password" name="password" class="box" placeholder="enter your password" id="" required>
     <div class="checkbox">
-      <input type="checkbox" name="" id="remember-me">
+      <input type="checkbox" name="checked" id="remember-me">
       <label for="remember-me"> remember me</label>
     </div>
     <input type="submit" value="sign in" class="btn">
-    <p>forget password ? <a href="#">click here</a></p>
-    <p>don't have an account ? <a href="#">create one</a></p>
+    <p>forget password ? <a href="/login/remind">click here</a></p>
+    <p>don't have an account ? <a href="/login/register">create one</a></p>
   </form>
 </div>
