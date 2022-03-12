@@ -3,7 +3,7 @@ import * as jwt from "jsonwebtoken";
 import { ObjectId } from "mongodb";
 import { UserRecord } from "../records/User.record";
 import { UserRepository } from "../records/UserRepository";
-import { ACCESS_TOKEN_KEY, compareText, createRefreshToken, createSesionToken, encryptText } from "../utils/secure";
+import { compareText, createRefreshToken, createSesionToken, encryptText } from "../utils/secure";
 import { tokenEntity } from "./home";
 
 
@@ -53,7 +53,7 @@ loginRouter
   .post('/logout', async (req, res) => {
 
     let jwtCookie: string | undefined = req.cookies.jwt;
-    let verifyToken = jwt.verify(jwtCookie, ACCESS_TOKEN_KEY) as tokenEntity;
+    let verifyToken = jwt.verify(jwtCookie, process.env.ACCESS_TOKEN_KEY) as tokenEntity;
     const mail = verifyToken.mail;
 
     await UserRepository.deleteSesionToken(mail)

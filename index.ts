@@ -1,4 +1,6 @@
+require('dotenv').config();
 import * as cookieParser from 'cookie-parser';
+import 'dotenv/config';
 import * as express from "express";
 import "express-async-errors";
 import { engine } from "express-handlebars";

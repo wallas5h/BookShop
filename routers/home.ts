@@ -2,7 +2,6 @@ import { Router } from "express";
 import * as jwt from "jsonwebtoken";
 import { JwtPayload } from "jsonwebtoken";
 import { UserRepository } from "../records/UserRepository";
-import { ACCESS_TOKEN_KEY } from "../utils/secure";
 
 export interface tokenEntity extends JwtPayload {
   mail: string;
@@ -21,7 +20,7 @@ homeRouter
       })
     }
     else {
-      let verifyToken = jwt.verify(jwtCookie, ACCESS_TOKEN_KEY) as tokenEntity;
+      let verifyToken = jwt.verify(jwtCookie, process.env.ACCESS_TOKEN_KEY) as tokenEntity;
       const mail = verifyToken.mail;
 
       // console.log(typeof mail)

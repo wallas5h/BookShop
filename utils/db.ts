@@ -1,8 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const pass = '3f4zNGDblnXXrZMh'
-
-const uri = 'mongodb+srv://guest1:5IvI2wSlnc8J4vYG@cluster0.skad9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const uri = process.env.DATABASE;
 
 const options = {
   useNewUrlParser: true,
@@ -19,7 +17,3 @@ try {
 } catch (error) {
   console.log(error)
 }
-
-
-
-// const quotesCol = client.db("Quotes").collection("quotes");
