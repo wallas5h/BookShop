@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 const pass = '3f4zNGDblnXXrZMh'
 
-const uri = `mongodb+srv://guest1:5IvI2wSlnc8J4vYG@cluster0.skad9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = 'mongodb+srv://guest1:5IvI2wSlnc8J4vYG@cluster0.skad9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 const options = {
   useNewUrlParser: true,

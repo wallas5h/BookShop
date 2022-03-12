@@ -15,9 +15,11 @@ export class UserRecord implements UserEntity {
   // passwordHash: string;
   password: string;
   phone: string;
+  refToken: string;
+  sesToken?: string | null;
 
   constructor(obj: UserRecord) {
-    const { _id, mail, phone, password } = obj;
+    const { _id, mail, phone, password, refToken, sesToken } = obj;
 
     if (!mail || typeof mail !== 'string' || mail.indexOf('@') === -1 || mail.length < 2) {
       throw new Error('Incorrect mail');
@@ -27,6 +29,8 @@ export class UserRecord implements UserEntity {
     this.mail = mail;
     this.phone = phone;
     this.password = password;
+    this.refToken = refToken;
+    this.sesToken = sesToken ?? null;
 
   }
 

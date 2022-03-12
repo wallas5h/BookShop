@@ -1,3 +1,4 @@
+import * as cookieParser from 'cookie-parser';
 import * as express from "express";
 import "express-async-errors";
 import { engine } from "express-handlebars";
@@ -20,6 +21,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({
   extended: true
 }));
+app.use(cookieParser())
 
 app.engine('.hbs', engine({
   extname: '.hbs',

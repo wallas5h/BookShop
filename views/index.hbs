@@ -17,13 +17,31 @@
 </head>
 
 <body>
-  {{!-- {{>loader}} --}}
+  {{>loader}}
 
   {{>header}}
 
   {{>navbar-bottom}}
 
-  {{>login-container}}
+  {{#if isActiveToken}}
+
+  <div class="login-form-container">
+
+    <div id="close-login-btn" class="fas fa-times"></div>
+
+    <form action="/login/logout" method="post">
+      <h3>Sign in</h3>
+      <span style="text-transform: none;">You are logged as user: <strong>{{mail}}</strong></span>
+
+      <input type="submit" value="logout" class="btn">
+
+    </form>
+  </div>
+
+  {{/if}}
+
+  {{#unless isActiveToken}} {{>login-container}} {{/unless}}
+
 
   {{>home-section}}
 

@@ -11,5 +11,19 @@ export class UserRepository {
     const item = ((await usersRegistered.findOne({ "mail": mail }))) as UserRecord
     return item === null ? null : new UserRecord(item)
   }
+  static async updateSesionToken(mail: string, data: string | null) {
+    usersRegistered.updateOne({ "mail": mail }, {
+      $set: {
+        "sesToken": data
+      }
+    })
+  }
+  static async deleteSesionToken(mail: string) {
+    usersRegistered.updateOne({ "mail": mail }, {
+      $unset: {
+        "sesToken": ""
+      }
+    })
+  }
 
 }
