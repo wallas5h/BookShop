@@ -3,6 +3,7 @@ import * as jwt from "jsonwebtoken";
 import { ObjectId } from "mongodb";
 import { UserRecord } from "../records/User.record";
 import { UserRepository } from "../records/UserRepository";
+import { ValidationError } from "../utils/errors";
 import { compareText, createRefreshToken, createSesionToken, encryptText } from "../utils/secure";
 import { tokenEntity } from "./home";
 
@@ -41,11 +42,11 @@ loginRouter
 
       }
       else {
-        res.status(400).send("invalid password Details");
+        throw new ValidationError('invalid login Details');
       }
 
     } catch (error) {
-      res.status(400).send("invalid login Details");
+      throw new ValidationError('invalid login Details')
     }
 
   })

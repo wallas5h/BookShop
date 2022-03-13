@@ -9,6 +9,7 @@ import { homeRouter } from "./routers/home";
 import { loginRouter } from "./routers/login";
 import { newsletterRouter } from "./routers/newsletter";
 import './utils/db';
+import { handleError } from './utils/errors';
 
 
 
@@ -34,6 +35,8 @@ app.set('view engine', '.hbs');
 app.use('/', homeRouter);
 app.use('/newsletter', newsletterRouter);
 app.use('/login', loginRouter);
+
+app.use(handleError);
 
 
 app.listen(3000, '127.0.0.1', () => {

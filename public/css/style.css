@@ -927,4 +927,12 @@ body {
 .info-added-container span strong {
   text-transform: lowercase;
 }
+
+.error {
+  background-color: #e59b9b;
+  border: 2px solid red;
+  padding: 20px;
+  margin: 10px auto;
+  width: 80%;
+}
 /*# sourceMappingURL=style.css.map */
