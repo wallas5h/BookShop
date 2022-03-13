@@ -11,13 +11,14 @@ export class BookRecord implements BookEntity {
   _id: ObjectId;
   title: string;
   image: string;
-  newPrice: string;
-  oldPrice: string;
-  purchasePrice: string;
+  newPrice: number;
+  oldPrice: number;
+  purchasePrice: number;
   description: string;
+  count: number
 
   constructor(obj: BookRecord) {
-    const { _id, title, image, newPrice, oldPrice, purchasePrice, description } = obj;
+    const { _id, title, image, newPrice, oldPrice, purchasePrice, description, count } = obj;
 
     this._id = _id ?? new ObjectId();
     this.title = title;
@@ -26,6 +27,7 @@ export class BookRecord implements BookEntity {
     this.newPrice = newPrice;
     this.purchasePrice = purchasePrice;
     this.description = description;
+    this.count = count ?? 0;
   }
 
 }

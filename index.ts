@@ -5,6 +5,7 @@ import * as express from "express";
 import "express-async-errors";
 import { engine } from "express-handlebars";
 import * as methodOverride from "method-override";
+import { cartRouter } from './routers/cart';
 import { homeRouter } from "./routers/home";
 import { loginRouter } from "./routers/login";
 import { newsletterRouter } from "./routers/newsletter";
@@ -35,6 +36,7 @@ app.set('view engine', '.hbs');
 app.use('/', homeRouter);
 app.use('/newsletter', newsletterRouter);
 app.use('/login', loginRouter);
+app.use('/cart', cartRouter);
 
 app.use(handleError);
 

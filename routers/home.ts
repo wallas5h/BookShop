@@ -13,6 +13,9 @@ export const homeRouter = Router();
 homeRouter
   .get('/', async (req, res) => {
 
+    // await BookRepository.deleteAllbooks();
+    // await BookRepository.insertbooks();
+
     let featuredBooks = await BookRepository.findAll();
     let arrivalsBooks = (await BookRepository.findAll()).reverse()
 
