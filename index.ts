@@ -9,6 +9,7 @@ import { cartRouter } from './routers/cart';
 import { homeRouter } from "./routers/home";
 import { loginRouter } from "./routers/login";
 import { newsletterRouter } from "./routers/newsletter";
+import { wishlistRouter } from './routers/wishlist';
 import './utils/db';
 import { handleError } from './utils/errors';
 
@@ -37,6 +38,7 @@ app.use('/', homeRouter);
 app.use('/newsletter', newsletterRouter);
 app.use('/login', loginRouter);
 app.use('/cart', cartRouter);
+app.use('/wishlist', wishlistRouter)
 
 app.use(handleError);
 

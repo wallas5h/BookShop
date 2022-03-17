@@ -757,6 +757,113 @@ body{
   width: 80%;
 }
 
+.shoppingCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .heading{
+    text-align: center;
+    margin:  0 auto;
+    margin-bottom: 4rem;
+  }
+  table{
+    flex-basis: 100%;
+  }
+  tr{
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: $border;
+    margin: 1rem 0;
+  }
+  th{
+    font-size: 1.8rem;
+  }
+  .box{
+
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: $border;
+    margin: 1rem 0;
+    &:hover{
+      border: $border-hover;
+    }
+    .image img{
+      height: 10rem;
+      width: 10rem;
+      background-color: #444;
+    }
+
+      h3{
+        margin-right: auto;
+        font-size: 2rem;
+        color: $black;
+      }
+      .price{
+        font-size: 1.8rem;
+        color: $black;
+        padding-bottom: 0.5rem;
+        span{
+          font-size: 1.5rem;
+          color: $light-color;
+          text-decoration: line-through;
+         }
+      }
+  
+     .amount{
+       display: flex;
+       justify-content: center;
+       margin: 0 4rem;
+       text-align: center;
+       display: flex;
+       flex-flow: row wrap;
+       font-size: 2rem ;
+
+
+       input{
+        font-size: 1.8rem;
+         background-color: $green;
+         text-align: center;
+         color: $black;
+         font-weight: 700;
+       }
+     }
+     .remove{
+       a{
+       margin: 0 2rem 0 4rem;
+       padding: 0 2rem 0 2rem;
+       cursor: pointer;
+       }
+
+     }
+    
+  }
+  .order{
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    .btn{
+      background-color: $dark-color;
+      &:hover{
+        background-color: $light-color;
+      }
+    }
+  }
+} 
+th.summary{
+  display: block;
+  padding: 1rem 0;
+  background: $green;
+  color: #f3f3f3;
+}
+
+th.sum{
+  border: .5rem solid $green;
+
+}
+
+
+
 
 
 

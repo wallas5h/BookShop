@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <section class="shoppingCard">
+
+    <h1 class="heading"> <span>Shopping Cart</span> </h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Title</th>
+          <th>Amount</th>
+          <th>Price</th>
+
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each shoppingCard}}
+        <tr class="box">
+          <th>
+            <div class="image">
+              <img src="image/{{this.image}}.png" alt="">
+            </div>
+          </th>
+
+          <th>
+            <h3>{{this.title}}</h3>
+          </th>
+
+          <th>
+            <div class="amount">
+              {{!-- <span>{{this.count}}</span> --}}
+              <input type="number" name="amount" value="1" min="1" max="{{this.count}}">
+            </div>
+          </th>
+
+          <th>
+            <span class="price">${{this.newPrice}}</span>
+          </th>
+
+          <th>
+            <div class="remove">
+              <a href="/cart/remove/{{this._id}}" class="fa-solid fa-trash-can"></a>
+              {{!-- <i></i> --}}
+            </div>
+
+          </th>
+        </tr>
+        {{/each}}
+        <tr>
+          <th></th>
+          <th></th>
+          <th class="summary">Sum</th>
+          <th class="sum">${{sum}}</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="order"><a class="btn" href="/order">Order now</a></div>
+
+
+
+  </section>
+  <section>
+    {{>go-home}}
+  </section>
+
+
+</body>
+
+</html>
