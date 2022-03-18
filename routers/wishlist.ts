@@ -40,7 +40,7 @@ wishlistRouter
 
       await UserRepository.updateUser(rootUser);
 
-      res.redirect('/')
+      res.redirect('/#featured')
     }
 
   })

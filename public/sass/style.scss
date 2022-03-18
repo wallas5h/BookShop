@@ -771,10 +771,11 @@ body{
     flex-basis: 100%;
   }
   tr{
+    // display: block;
     gap: 1.5rem;
     padding: 2rem 1rem;
     border: $border;
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
   th{
     font-size: 1.8rem;
@@ -791,7 +792,10 @@ body{
     .image img{
       height: 10rem;
       width: 10rem;
-      background-color: #444;
+      background-color: $light-color;
+      @media (max-width:768px) {
+        display: none;
+      }
     }
 
       h3{
@@ -803,6 +807,9 @@ body{
         font-size: 1.8rem;
         color: $black;
         padding-bottom: 0.5rem;
+        @media (max-width: 468px){
+          padding-left: 2rem;
+        }
         span{
           font-size: 1.5rem;
           color: $light-color;

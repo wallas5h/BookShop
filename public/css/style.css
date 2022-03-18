@@ -965,7 +965,7 @@ body {
   gap: 1.5rem;
   padding: 2rem 1rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .shoppingCard th {
@@ -986,7 +986,13 @@ body {
 .shoppingCard .box .image img {
   height: 10rem;
   width: 10rem;
-  background-color: #444;
+  background-color: #666;
+}
+
+@media (max-width: 768px) {
+  .shoppingCard .box .image img {
+    display: none;
+  }
 }
 
 .shoppingCard .box h3 {
@@ -999,6 +1005,12 @@ body {
   font-size: 1.8rem;
   color: #444;
   padding-bottom: 0.5rem;
+}
+
+@media (max-width: 468px) {
+  .shoppingCard .box .price {
+    padding-left: 2rem;
+  }
 }
 
 .shoppingCard .box .price span {

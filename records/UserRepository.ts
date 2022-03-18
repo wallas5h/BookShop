@@ -57,7 +57,6 @@ export class UserRepository {
       return item.title !== product.title
     });
 
-    console.log(newWishList)
     await usersRegistered.updateOne({ "_id": user._id }, {
       $set: {
         "wishList": newWishList
