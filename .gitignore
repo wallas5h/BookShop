@@ -1,4 +1,5 @@
 /node_modules
-tsconfig.json
+.tsconfig.json
 .env
+config
 # .gitignore
