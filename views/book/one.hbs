@@ -16,7 +16,7 @@
   <div class="book-container">
     {{#with book}}
     <div class="image">
-      <img src="image/{{image}}.png" alt=`Image of book ${{title}}`>
+      <img src=" http://localhost:3000/image/{{image}}.png" alt=`Image of book ${{title}}`>
     </div>
 
     <div class="content">
@@ -49,47 +49,3 @@
 </body>
 
 </html>
-
-
-{{!-- .deal {
-background: #f3f3f3;
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-gap: 1.5rem;
-
-.content {
-flex: 1 1 42rem;
-
-h3 {
-color: $green;
-font-size: 2.5rem;
-padding-bottom: .5rem;
-
-@media (max-width:768px) {
-font-size: 1.5rem;
-}
-}
-
-h1 {
-color: $black;
-font-size: 4rem;
-// padding-bottom: .5rem;
-}
-
-p {
-color: $light-color;
-font-size: 1.4rem;
-line-height: 2;
-padding: 1rem 0;
-}
-}
-
-.image {
-flex: 1 1 42rem;
-
-img {
-width: 100%;
-}
-}
-} --}}

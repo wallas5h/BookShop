@@ -39,7 +39,29 @@
   {{#unless isActiveToken}} {{>login-container}} {{/unless}}
 
 
-  {{>home-section}}
+  {{!-- {{>home-section featuredBooks}} --}}
+
+  <section class="home" id="home">
+
+    <div class="row">
+
+      <div class="content">
+        <h3>upto 75% off</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt nostrum accusamus. Nam alias sit
+          necessitatibus, aliquid ex minima at!</p>
+        <a href="#" class="btn">shop now</a>
+      </div>
+
+      <div class="swiper books-slider">
+        <div class="swiper-wrapper">
+          {{#each featuredBooks}}
+          <a href="/book/{{this._id}}" class="swiper-slide"><img src="image/{{this.image}}.png" alt="Image of book {{title}}"></a>
+          {{/each}}
+        </div>
+        <img src="image/stand.png" class="stand" alt="">
+      </div>
+    </div>
+  </section>
 
   {{>icons-section}}
 
@@ -95,9 +117,9 @@
 
         {{#each featuredBooks}}
 
-        <a href="#" class="swiper-slide box">
+        <a href="/book/{{this._id}}" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/{{this.image}}.png" alt="">
+                    <img src="image/{{this.image}}.png" alt="Image of book {{title}}">
                 </div>
                 <div class="content">
                     <h3>{{this.title}}</h3>
@@ -123,7 +145,7 @@
 
         {{#each arrivalsBooks}}
 
-        <a href="#" class="swiper-slide box">
+        <a href="/book/{{this._id}}" class="swiper-slide box">
                 <div class="image">
                     <img src="image/{{this.image}}.png" alt="">
                 </div>

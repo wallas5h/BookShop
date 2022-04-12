@@ -9,8 +9,6 @@ bookRouter
 
     let book = await BookRepository.findOneById(req.params.id);
 
-    console.log(book)
-
     res
       .render('book/one', {
         book

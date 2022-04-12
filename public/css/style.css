@@ -989,7 +989,7 @@ body {
 .shoppingCard .box .image img {
   height: 10rem;
   width: 10rem;
-  background-color: #666;
+  background-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -1151,8 +1151,8 @@ th.sum {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30rem;
           flex: 1 1 30rem;
-  background-color: #27ae60;
-  min-width: 30rem;
+  background-color: #fff;
+  max-width: 30rem;
   min-height: 40rem;
 }
 

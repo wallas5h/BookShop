@@ -934,7 +934,7 @@ body {
     .image img {
       height: 10rem;
       width: 10rem;
-      background-color: $light-color;
+      background-color: #fff;
 
       @media (max-width:768px) {
         display: none;
@@ -1081,8 +1081,8 @@ th.sum {
 
   .image {
     flex: 1 1 30rem;
-    background-color: #27ae60;
-    min-width: 30rem;
+    background-color: #fff;
+    max-width: 30rem;
     min-height: 40rem;
 
     img {

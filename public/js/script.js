@@ -1,4 +1,3 @@
-// https://www.youtube.com/watch?v=6XmDdIRmg84
 
 let searchForm = document.querySelector('.search-form');
 document.querySelector('#search-btn').addEventListener('click', () => {
