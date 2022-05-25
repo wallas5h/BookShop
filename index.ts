@@ -7,6 +7,7 @@ import "express-async-errors";
 import { engine } from "express-handlebars";
 import rateLimit from 'express-rate-limit';
 import methodOverride from "method-override";
+import { config } from './config/config';
 import { bookRouter } from './routers/book';
 import { cartRouter } from './routers/cart';
 import { homeRouter } from "./routers/home";
@@ -27,7 +28,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: config.corsOrigin
 }))
 
 app.use(limiter);
