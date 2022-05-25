@@ -1,11 +1,11 @@
 require('dotenv').config();
-import * as cookieParser from 'cookie-parser';
-import * as cors from 'cors';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import 'dotenv/config';
-import * as express from "express";
+import express from "express";
 import "express-async-errors";
 import { engine } from "express-handlebars";
-import * as methodOverride from "method-override";
+import methodOverride from "method-override";
 import { bookRouter } from './routers/book';
 import { cartRouter } from './routers/cart';
 import { homeRouter } from "./routers/home";
@@ -17,7 +17,7 @@ import './utils/db';
 import { handleError } from './utils/errors';
 
 
-const { PORT = 3000 } = process.env;
+const { PORT } = process.env;
 const app = express();
 
 
@@ -50,7 +50,7 @@ app.use('/book', bookRouter);
 app.use(handleError);
 
 
-app.listen(PORT, () => {
+app.listen(3000, '0.0.0.0', () => {
   console.log('server started at http://localhost:' + PORT);
 });
 
