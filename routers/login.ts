@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import { ObjectId } from "mongodb";
 import { UserRecord } from "../records/User.record";
 import { UserRepository } from "../records/UserRepository";

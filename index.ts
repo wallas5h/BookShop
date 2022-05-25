@@ -1,11 +1,11 @@
 require('dotenv').config();
-import * as cookieParser from 'cookie-parser';
-import * as cors from 'cors';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import 'dotenv/config';
-import * as express from "express";
+import express from "express";
 import "express-async-errors";
 import { engine } from "express-handlebars";
-import * as methodOverride from "method-override";
+import methodOverride from "method-override";
 import { bookRouter } from './routers/book';
 import { cartRouter } from './routers/cart';
 import { homeRouter } from "./routers/home";
