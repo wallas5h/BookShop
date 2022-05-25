@@ -5,7 +5,9 @@ import 'dotenv/config';
 import express from "express";
 import "express-async-errors";
 import { engine } from "express-handlebars";
+import rateLimit from 'express-rate-limit';
 import methodOverride from "method-override";
+import { config } from './config/config';
 import { bookRouter } from './routers/book';
 import { cartRouter } from './routers/cart';
 import { homeRouter } from "./routers/home";
@@ -16,22 +18,28 @@ import { wishlistRouter } from './routers/wishlist';
 import './utils/db';
 import { handleError } from './utils/errors';
 
-
+const limiter = rateLimit({
+  windowMs: 5 * 60 * 1000,
+  max: 100
+})
 const { PORT } = process.env;
+
 const app = express();
 
 
-// app.use(bodyParser.urlencoded({ extended: false }))
-app.use(methodOverride('_method'))
+app.use(cors({
+  origin: config.corsOrigin
+}))
+
+app.use(limiter);
+
+app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({
   extended: true
 }));
-app.use(cookieParser())
-app.use(cors({
-  origin: 'http://localhost:3000'
-}))
+app.use(cookieParser());
 
 app.engine('.hbs', engine({
   extname: '.hbs',
