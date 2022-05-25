@@ -17,7 +17,7 @@ import './utils/db';
 import { handleError } from './utils/errors';
 
 
-const { PORT = 3000 } = process.env;
+const { PORT } = process.env;
 const app = express();
 
 
@@ -50,7 +50,7 @@ app.use('/book', bookRouter);
 app.use(handleError);
 
 
-app.listen(PORT, () => {
+app.listen(3000, '0.0.0.0', () => {
   console.log('server started at http://localhost:' + PORT);
 });
 
