@@ -1,14 +1,3 @@
-// {
-//   "compilerOptions": {
-//     "outDir": "./dist/",
-//     "noImplicitAny": false,
-//     // "module": "es6",
-//     "target": "es5",
-//     "jsx": "react",
-//     "allowJs": true,
-//     "moduleResolution": "node"
-//   }
-// }
 {
   "compilerOptions": {
     "noImplicitAny": false,
@@ -16,13 +5,14 @@
     "sourceMap": true,
     "target": "es6",
     "downlevelIteration": true,
+    "module": "CommonJS",
     "lib": [
-      "es6",
-      "dom.iterable"
+      "es6"
     ],
     "outDir": "dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "esModuleInterop": true
   }
 }

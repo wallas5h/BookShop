@@ -1,6 +1,11 @@
 /node_modules
-.tsconfig.json
 .env
+<<<<<<< HEAD
 config
 /dist
 # .gitignore
+=======
+config/config.ts
+/dist
+# .gitignore
+>>>>>>> 853e83e6880483fc265c585d324a19f1eefa4423

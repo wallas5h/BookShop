@@ -1,6 +1,5 @@
 import { Router } from "express";
-import * as jwt from "jsonwebtoken";
-import { JwtPayload } from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { BookRepository } from "../records/book.repository";
 import { UserRepository } from "../records/UserRepository";
 
